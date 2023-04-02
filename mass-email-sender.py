@@ -4,7 +4,7 @@ import ssl
 import smtplib
 import pandas as pd
 
-st.set_page_config(page_title="Email Sender")
+st.set_page_config(page_title="Email Sender", layout="wide")
 
 st.markdown("# Email Sender")
 st.write(
