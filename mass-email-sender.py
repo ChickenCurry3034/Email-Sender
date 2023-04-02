@@ -5,6 +5,21 @@ import smtplib
 import pandas as pd
 
 st.set_page_config(page_title="Email Sender", layout="wide")
+def add_bg_from_url():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-image: url("http://unblast.com/wp-content/uploads/2021/01/Space-Background-Images.jpg");
+             background-attachment: fixed;
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+
+add_bg_from_url()
 
 st.markdown("# Email Sender")
 st.write(
