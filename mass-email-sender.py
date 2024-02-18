@@ -29,7 +29,7 @@ st.write(
 choice = st.selectbox('Select which sender you would like to use',['Simple Sender','Mass Sender'])
 if choice == 'Simple Sender':
     email_sender = st.text_input('On which email is this email being sent by?')
-    email_password = st.text_input('What is your app password?')
+    email_password = st.text_input('What is your app password?', type="password")
     email_receiver = st.text_input('Which email is this going to?')
     subject = st.text_input('Insert Subject')
     body = st.text_input('Insert Body')
@@ -47,7 +47,7 @@ if choice == 'Simple Sender':
 
 elif choice == 'Mass Sender':
     email_sender = st.text_input('On which email is this email being sent by?')
-    email_password = st.text_input('What is your app password?')
+    email_password = st.text_input('What is your app password?', type="password")
     uploaded_file = st.file_uploader('Insert CSV file of all the users you are sending the email to')
     st.write('Excel sheet **MUST** be formatted like the one shown below')
     df = pd.read_csv('mass-sender-example.csv')
